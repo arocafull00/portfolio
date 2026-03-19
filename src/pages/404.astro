@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const title = "404 — Página no encontrada | Adrian Rocafull";
+const description = "La página que buscas no existe o se ha movido.";
+---
+
+<Layout title={title} description={description}>
+  <main id="main-content" tabindex="-1" class="not-found">
+    <h1>404</h1>
+    <p>No encontramos esta página.</p>
+    <p><a href="/">Volver al inicio</a></p>
+  </main>
+</Layout>
+
+<style>
+  .not-found {
+    margin: auto;
+    padding: 2rem 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+  }
+  .not-found h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .not-found a {
+    color: #fbbf24;
+    text-decoration: underline;
+  }
+  .not-found a:hover {
+    color: #fcd34d;
+  }
+</style>
