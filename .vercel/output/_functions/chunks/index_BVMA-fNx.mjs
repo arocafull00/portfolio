@@ -1,6 +1,6 @@
-import { c as createComponent } from './astro-component_9-ZibaCH.mjs';
+import { c as createComponent } from './astro-component_BoOVk2Ig.mjs';
 import 'piccolore';
-import { l as createRenderInstruction, m as maybeRenderHead, r as renderTemplate, s as spreadAttributes, h as addAttribute, n as renderComponent, u as unescapeHTML, o as renderHead, p as renderSlot } from './entrypoint_uLAJILKk.mjs';
+import { l as createRenderInstruction, m as maybeRenderHead, r as renderTemplate, s as spreadAttributes, h as addAttribute, n as renderComponent, u as unescapeHTML, o as renderHead, p as renderSlot } from './entrypoint_DFO8T2kE.mjs';
 import 'clsx';
 
 async function renderScript(result, id) {
@@ -198,12 +198,6 @@ const $$Code2 = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<svg${spreadAttributes(Astro2.props)} xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-folder-code" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M11 19h-6a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2h4l3 3h7a2 2 0 0 1 2 2v4"></path> <path d="M20 21l2 -2l-2 -2"></path> <path d="M17 17l-2 2l2 2"></path> </svg>`;
 }, "C:/Users/hardh/Documents/code/portfolioV2/src/icons/Code2.astro", void 0);
 
-const $$Code = createComponent(($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$props, $$slots);
-  Astro2.self = $$Code;
-  return renderTemplate`${maybeRenderHead()}<svg${spreadAttributes(Astro2.props)} xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-desktop-code" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M12.5 16h-8.5a1 1 0 0 1 -1 -1v-10a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v8"></path> <path d="M7 20h4"></path> <path d="M9 16v4"></path> <path d="M20 21l2 -2l-2 -2"></path> <path d="M17 17l-2 2l2 2"></path> </svg>`;
-}, "C:/Users/hardh/Documents/code/portfolioV2/src/icons/Code.astro", void 0);
-
 const $$JavaScript = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$JavaScript;
@@ -240,10 +234,26 @@ const $$LinkButton = createComponent(($$result, $$props, $$slots) => {
 const $$Carousel = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$Carousel;
-  const { carouselImages, imageAltBase } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<div class="relative w-full" data-carousel="slide"> <div class="relative h-56 overflow-hidden rounded-lg md:h-96"> ${carouselImages.map((carouselImage, index) => {
-    return renderTemplate`<div class="hidden duration-700 ease-in-out" data-carousel-item> <img${addAttribute(carouselImage, "src")}${addAttribute(1920, "width")}${addAttribute(1080, "height")} class="absolute block w-full max-h-full object-contain -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"${addAttribute(`${imageAltBase} — screenshot ${index + 1}`, "alt")} loading="lazy"> </div>`;
-  })} </div> <button type="button" class="absolute top-0 start-0 z-30 flex h-full items-center justify-center px-4 cursor-pointer group focus-visible:outline-none" data-carousel-prev aria-label="Previous slide"> <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus-visible:ring-4 group-focus-visible:ring-white dark:group-focus-visible:ring-gray-800/70"> <svg class="w-4 h-4 text-white dark:text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"></path> </svg> <span class="sr-only">Previous</span> </span> </button> <button type="button" class="absolute top-0 end-0 z-30 flex h-full items-center justify-center px-4 cursor-pointer group focus-visible:outline-none" data-carousel-next aria-label="Next slide"> <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus-visible:ring-4 group-focus-visible:ring-white dark:group-focus-visible:ring-gray-800/70"> <svg class="w-4 h-4 text-white dark:text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"></path> </svg> <span class="sr-only">Next</span> </span> </button> </div>`;
+  const { carouselImages } = Astro2.props;
+  return renderTemplate`${maybeRenderHead()}<div id="default-carousel" class="relative w-full" data-carousel="slide"> <!-- Carousel wrapper --> <div class="relative h-56 overflow-hidden rounded-lg md:h-96"> ${carouselImages.map((carouselImage) => {
+    return renderTemplate`<div class="hidden duration-700 ease-in-out" data-carousel-item> <img${addAttribute(carouselImage, "src")} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."> </div>`;
+  })} </div> <!-- Slider indicators --> <!-- <div
+        class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse"
+    >
+        {
+            carouselImages.map((image, index) => {
+                return (
+                    <button
+                        type="button"
+                        class="w-3 h-3 rounded-full"
+                        aria-current={index == 0 ? true : false}
+                        aria-label=\`Slide: \${index}\`
+                        data-carousel-slide-to=index
+                    />
+                );
+            })
+        }
+    </div> --> <!-- Slider controls --> <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev> <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"> <svg class="w-4 h-4 text-white dark:text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"></path> </svg> <span class="sr-only">Previous</span> </span> </button> <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next> <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"> <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"></path> </svg> <span class="sr-only">Next</span> </span> </button> </div>`;
 }, "C:/Users/hardh/Documents/code/portfolioV2/src/components/Carousel.astro", void 0);
 
 const $$FreelanceProjectItem = createComponent(($$result, $$props, $$slots) => {
@@ -302,11 +312,6 @@ const $$FreelanceProjects = createComponent(($$result, $$props, $$slots) => {
       class: "bg-[#3178c64d] text-white",
       icon: $$TypeScript
     },
-    ASTRO: {
-      name: "Astro",
-      class: "bg-[#FFFFFF66] text-white",
-      icon: $$AstroIcon
-    },
     REACT: {
       name: "React",
       class: "bg-[#00D8FF66] text-white",
@@ -351,11 +356,6 @@ const $$FreelanceProjects = createComponent(($$result, $$props, $$slots) => {
       name: "Prisma",
       class: "bg-[#2d374866] text-white",
       icon: $$SQL
-    },
-    PYTHON: {
-      name: "Python",
-      class: "bg-[#3776ab66] text-white",
-      icon: $$Code
     }
   };
   const PROJECTS = [
@@ -381,18 +381,6 @@ const $$FreelanceProjects = createComponent(($$result, $$props, $$slots) => {
       title: "Circulantis dashboard — operations and finance",
       description: `React and Node.js web app for operational management: CRUD workflows, automated calculations, and data with Turso (SQLite) and Prisma.`,
       tags: [TAGS.REACT, TAGS.NODE, TAGS.TURSO, TAGS.PRISMA, TAGS.TS],
-      images: [""]
-    },
-    {
-      title: "Tender Dashboard — Circulantis",
-      description: `Python desktop app that scrapes public tenders and auto-generates structured reports for the team.`,
-      tags: [TAGS.PYTHON],
-      images: [""]
-    },
-    {
-      title: "Fontanería Rocafull — business site & blog",
-      description: `Astro landing and blog for a local business, optimized for SEO and performance.`,
-      tags: [TAGS.ASTRO, TAGS.TS],
       images: [""]
     }
   ];
