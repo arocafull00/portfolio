@@ -1,0 +1,66 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+import Briefcase from "../icons/Briefcase.astro";
+---
+
+<header id="experience" class="flex content-start items-end gap-2 mb-8">
+  <Briefcase />
+  <h1 class="text-2xl font-bold">Work experience</h1>
+</header>
+<section
+  id="experience"
+  class="relative border-s border-gray-200 dark:border-gray-700 mb-14"
+>
+  <ExperienceItem
+    date="September 2025 - Present · Remote"
+    title="Full Stack Developer — React Native, Next.js, Node.js"
+    location="DocMorris"
+    description=`DocMorris is Europe's largest online pharmacy, with mobile app and website across multiple countries.`
+    bullets={[
+      "AI Health Chatbot (React Native, Next.js, Node.js): assistant for health tracking, medical Q&A, and triage across services and catalogue on web and app.",
+      "Promofarma Social Feed (React Native, Node.js): social-style feature for health and wellness content and category follows.",
+      "Remote-first international team: code reviews, sprint planning, and technical collaboration.",
+    ]}
+  />
+  <ExperienceItem
+    date="May 2024 - September 2025 · Valencia, Spain"
+    title="Frontend / Full-Stack Developer — React, React Native, Node.js, AWS"
+    location="Flumotion"
+    description=`Flumotion is Spain's leading company in video, audio, and VOD streaming.`
+    bullets={[
+      "Built and maintained production web and mobile apps with React, React Native, TypeScript, Node.js, and AWS.",
+      "OTT features: geoblocking, per-user analytics, push notifications, subtitles, multi-format video and audio.",
+      "AWS: Cognito/Amplify auth, DynamoDB, Lambda. Agile collaboration with design, backend, and QA.",
+    ]}
+  />
+  <ExperienceItem
+    date="February 2023 - May 2024 · Valencia, Spain"
+    title="Full-Stack Developer & Tester — Angular, .NET"
+    location="Capgemini"
+    description=`Enterprise delivery for a major French energy company — foundation before my current focus on React and Node.`
+    bullets={[
+      "Web features with Angular, .NET, TypeScript, and SCSS.",
+      "Automated tests with Jest and Playwright; sprint reviews and client-facing demos.",
+    ]}
+  />
+  <ExperienceItem
+    date="January 2022 - Present (alongside full-time) · Remote"
+    title="Freelance Full-Stack Developer — React Native, Expo, Node.js"
+    location="Self-employed"
+    description={`Shipped desktop, web, and mobile work for companies and private clients.`}
+    bullets={[
+      "Ping (Jun 2025 - Sep 2025): secure messaging (UK) — React Native, Expo, Node.js; E2E chat, WebRTC calls, Signal Protocol, Supabase, Jitsi.",
+      "Circulantis Dashboard: React, Node.js, Turso, Prisma — ops and financial workflows.",
+      "Tender Dashboard — Circulantis: Python desktop app, tender scraping and report generation.",
+      "Diariamente: React Native, Supabase, Figma — psychologist-patient mood tracking.",
+      "OTT platform: React Native, AWS Amplify — geoblocking, analytics, push, subtitles, live chat.",
+      "Fontanería Rocafull: Astro — business site and blog, SEO and performance.",
+    ]}
+  />
+  <ExperienceItem
+    date="2018 - 2023 · Valencia, Spain"
+    title="Bachelor's Degree in Computer Science"
+    location="Universidad Politécnica de Valencia"
+    description=`Four-year degree in computer science and software engineering — design patterns, solid engineering practices, and problem solving at scale.`
+  />
+</section>

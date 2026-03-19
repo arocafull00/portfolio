@@ -1,0 +1,136 @@
+---
+import Code from "src/icons/Code2.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import JavaScript from "src/icons/JavaScript.astro";
+import TypeScript from "src/icons/TypeScript.astro";
+import AstroIcon from "src/icons/AstroIcon.astro";
+import MainProjectItem from "./MainProjectItem.astro";
+import React from "src/icons/React.astro";
+import Vitest from "src/icons/Vitest.astro";
+import SQL from "src/icons/SQL.astro";
+import Figma from "src/icons/Figma.astro";
+import Supabase from "src/icons/Supabase.astro";
+import AWS from "src/icons/AWS.astro";
+
+const TAGS = {
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  TS: {
+    name: "TypeScript",
+    class: "bg-[#3178c64d] text-white",
+    icon: TypeScript,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-[#FFFFFF66] text-white",
+    icon: AstroIcon,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#00D8FF66] text-white",
+    icon: React,
+  },
+  VITEST: {
+    name: "Vitest",
+    class: "bg-[#FCC72B66] text-white",
+    icon: Vitest,
+  },
+  SQL: {
+    name: "Microsoft SQL Server",
+    class: "bg-[#cfd8dc66] text-white",
+    icon: SQL,
+  },
+  FIGMA: {
+    name: "Figma",
+    class: "bg-[#F24E1E66] text-white",
+    icon: Figma,
+  },
+  REACTNATIVE: {
+    name: "React Native",
+    class: "bg-[#61DAFB66] text-white",
+    icon: React,
+  },
+  EXPO: {
+    name: "Expo",
+    class: "bg-[#18181b66] text-white",
+    icon: React,
+  },
+  NODE: {
+    name: "Node.js",
+    class: "bg-[#3c873a66] text-white",
+    icon: JavaScript,
+  },
+  SUPABASE: {
+    name: "Supabase",
+    class: "bg-[#30a9dc66] text-white",
+    icon: Supabase,
+  },
+  AWS: {
+    name: "AWS",
+    class: "bg-[#F9AB0066] text-white",
+    icon: AWS,
+  },
+  TURSO: {
+    name: "Turso",
+    class: "bg-[#1e293b66] text-white",
+    icon: SQL,
+  },
+  PRISMA: {
+    name: "Prisma",
+    class: "bg-[#2d374866] text-white",
+    icon: SQL,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Diariamente — psychologist and patient mobile app",
+    description: `React Native app connecting psychologists with patients in real time: patients log mood and anxiety moments; professionals review timelines. Built with TypeScript, Figma, V0, and Supabase.`,
+    link: "https://javascript-quizz-one.vercel.app/",
+    tags: [TAGS.REACTNATIVE, TAGS.TS, TAGS.SUPABASE, TAGS.FIGMA],
+    images: ["/Diariamente1.webp", "/Diariamente2.webp", "/Diariamente3.webp"],
+  },
+  {
+    title: "Ping — secure messaging and collaboration",
+    description: `React Native (Expo) and Node.js work for a UK secure messaging product: end-to-end encrypted chat, WebRTC calls, contacts and media. Signal Protocol, Supabase, and Jitsi with a focus on performance and UX.`,
+    tags: [TAGS.REACTNATIVE, TAGS.EXPO, TAGS.NODE, TAGS.TS, TAGS.SUPABASE],
+    images: [""],
+  },
+  {
+    title: "OTT platform — streaming (React Native, AWS)",
+    description: `Mobile streaming experience with AWS Amplify: auth, data, and Lambdas. Geoblocking, per-user analytics, push notifications, subtitles, live chat, and multi-format video and audio.`,
+    github:
+      "https://github.com/adriroca20/Astro/tree/main/free-screen-recorder",
+    tags: [TAGS.REACTNATIVE, TAGS.AWS, TAGS.NODE, TAGS.TS],
+    images: ["/OTT1.webp", "/OTT2.webp", "/OTT3.webp"],
+  },
+  {
+    title: "Circulantis dashboard — operations and finance",
+    description: `React and Node.js web app for operational management: CRUD workflows, automated calculations, and data with Turso (SQLite) and Prisma.`,
+    tags: [TAGS.REACT, TAGS.NODE, TAGS.TURSO, TAGS.PRISMA, TAGS.TS],
+    images: [""],
+  },
+  {
+    title:
+      "Tailwind CSS Animations — +70 utilities published to NPM",
+    description:
+      "Plugin and marketing site for Tailwind: 70+ animation utilities, Vitest coverage, and a one-click copy UI for class names.",
+    link: "https://tailwind-animations-eight.vercel.app/",
+    github: "https://github.com/adriroca20/Astro/tree/main/tailwind-animations",
+    tags: [TAGS.TAILWIND, TAGS.ASTRO, TAGS.VITEST],
+    images: ["/TailwindAnimations1.webp", "/TailwindAnimations2.webp"],
+  },
+];
+---
+
+<header id="mainProjects" class="flex content-start items-end gap-2 mb-8">
+  <Code />
+  <h1 class="text-2xl font-bold">Main projects</h1>
+</header>
+
+<section id="mainProjects" class="flex flex-col gap-y-16 mb-14">
+  {PROJECTS.map((project) => <MainProjectItem projectItemData={project} />)}
+</section>

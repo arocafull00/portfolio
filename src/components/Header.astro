@@ -1,0 +1,81 @@
+---
+import Hamburguer from "src/icons/Hamburguer.astro"
+import Cross from "src/icons/Cross.astro"
+---
+
+<header
+  class="flex justify-start items-start md:justify-center md:items-center h-[70px] p-3 w-full md:w-[800px] xl:w-[810px]
+    fixed top-0 right-0 sm:right-auto z-[99999] bg-[#181822f1] text-[#e5ebf3]
+    rounded-b-xl border-b border-[#ffffff60]
+    transition-all duration-500
+    overflow-hidden
+    "
+>
+  <nav
+    class="hidden md:flex sm:w-full sm:justify-between sm:align-items-center sm:gap-11 sm:opacity-80 sm:text-xl"
+  >
+    <a href="#home" aria-label="home">Home</a>
+    <a href="#experience" aria-label="experience">Experience</a>
+    <a href="#mainProjects" aria-label="mainProjects">Main projects</a>
+    <a href="#smallProjects" aria-label="smallProjects">Small projects</a>
+    <a href="#about-me" aria-label="about-me">About</a>
+    <a href="#contact" aria-label="contact">Contact</a>
+  </nav>
+  <nav class="flex justify-between items-start flex-col w-full flex-wrap gap-7 p-2 md:hidden">
+    <div class="w-full flex justify-between items-center" >
+      <a href="#home" aria-label="home">Home</a>
+      <button id="open-button" class="relative">
+        <Hamburguer class="size-6 transition duration-400 opacity-1 absolute top-2/4 right-1/2 translate-x-[-50%] translate-y-[-50%]"></Hamburguer>
+        <Cross class="size-6 opacity-0 transition duration-400 absolute top-2/4 right-1/2 translate-x-[-50%] translate-y-[-50%]"></Cross>
+      </button>
+    </div>
+    <div
+      id="items-sm-navbar"
+      class="flex justify-start items-start flex-col gap-3 text-xl duration-500"
+    >
+      <a href="#experience" aria-label="experience">Experience</a>
+      <a href="#mainProjects" aria-label="mainProjects">Main projects</a>
+      <a href="#smallProjects" aria-label="smallProjects">Small projects</a>
+      <a href="#about-me" aria-label="about-me">About</a>
+      <a href="#contact" aria-label="contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const openButton = document.querySelector("#open-button");
+  const header = document.querySelector("header");
+  const links = document.querySelectorAll("header a")
+  const iconsNavbar = openButton?.querySelectorAll("svg")
+  openButton?.addEventListener("click", () => {
+    header?.classList.toggle("h-[70px]");
+    header?.classList.toggle("h-[270px]");
+    iconsNavbar?.forEach((icon)=>{
+      icon.classList.toggle("opacity-0")
+      icon.classList.toggle("opacity-1")
+    })
+  });
+  links.forEach((link)=>{
+    link.addEventListener("click", ()=>{
+      header?.classList.add("h-[70px]");
+      header?.classList.remove("h-[270px]");
+      iconsNavbar?.item(0).classList.add("opacity-1")
+      iconsNavbar?.item(0).classList.remove("opacity-0")
+      iconsNavbar?.item(1).classList.add("opacity-0")
+      iconsNavbar?.item(1).classList.remove("opacity-1")
+    })
+  })
+</script>
+<style>
+  header {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-lg ring-1 backdrop-blur bg-[#181822f1] ring-white/10;
+    }
+  }
+</style>

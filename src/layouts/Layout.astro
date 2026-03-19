@@ -1,0 +1,58 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import SEO from "../components/SEO.astro";
+import "@fontsource-variable/onest";
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="dark">
+  <head>
+    <SEO description={description} title={title}></SEO>
+  </head>
+  <body>
+    <div
+      class="fixed top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.4),rgba(60,60,100,0.2))]"
+    >
+    </div>
+    <Header />
+    <slot />
+    <Footer />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  </body>
+</html>
+<style is:global>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    color-scheme: light dark;
+  }
+  html {
+    font-family: "Onest Variable", system-ui, sans-serif;
+    background-color: #050505;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+</style>

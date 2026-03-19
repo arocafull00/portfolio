@@ -1,0 +1,10 @@
+---
+import Badge from "./Badge.astro";
+
+interface Props {
+  name: string;
+}
+const { name } = Astro.props;
+---
+
+<Badge>{name}</Badge>

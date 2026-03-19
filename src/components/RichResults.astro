@@ -1,0 +1,32 @@
+---
+interface Props {
+  description: string;
+}
+const URL = "https://adrianrocafull.es";
+const { description } = Astro.props;
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  url: `${URL}`,
+  image: `${URL}/favicon.webp`,
+  sameAs: [
+    "https://github.com/adriroca20",
+    "https://www.linkedin.com/in/adri%C3%A1n-rocafull-448a1216a/",
+  ],
+  dateCreated: "2022-01-01T00:00:00+01:00",
+  dateModified: "2026-03-19T12:00:00+01:00",
+  mainEntity: {
+    "@type": "Person",
+    name: "Adrian Rocafull",
+    alternateName: "adriroca20",
+    description,
+  },
+};
+---
+
+<script
+  is:inline
+  type="application/ld+json"
+  set:html={JSON.stringify(organizationSchema)}
+/>
