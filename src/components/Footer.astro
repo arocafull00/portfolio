@@ -3,13 +3,13 @@ const currentYear = new Date().getFullYear()
 ---
 
 <footer
-  class="rounded-lg shadow m-4 bg-black/5 dark:bg-black/20 backdrop-blur-lg w-full xl:w-[1120px] mx-auto mb-10"
+  class="mx-auto mb-6 w-full max-w-[min(100%,1120px)] px-4 sm:mb-8 sm:px-6 md:mb-10 lg:px-8 rounded-lg shadow bg-black/5 dark:bg-black/20 backdrop-blur-lg"
 >
   <div
-    class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+    class="flex w-full min-w-0 flex-col items-center gap-4 py-4 text-center sm:py-5 md:flex-row md:items-center md:justify-between md:gap-6 md:py-5 md:text-left"
   >
     <span
-      class="text-sm sm:text-center text-yellow-800/90 dark:text-yellow-200/90"
+      class="inline-block max-w-prose text-sm text-balance text-yellow-800/90 dark:text-yellow-200/90"
       >© {currentYear}
       <a
         href="https://adrianrocafull.es"
@@ -18,19 +18,19 @@ const currentYear = new Date().getFullYear()
       >.
     </span>
     <ul
-      class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
+      class="flex max-w-full flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-medium dark:text-white/90 md:shrink-0 md:justify-end"
     >
       <li>
         <a
           href="#about-me"
-          class="rounded-sm me-4 md:me-6 underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400/80 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
+          class="rounded-sm inline-flex underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400/80 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
           >About me</a
         >
       </li>
       <li>
         <a
           href="#contact"
-          class="rounded-sm underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400/80 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
+          class="rounded-sm inline-flex underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400/80 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
           >Contact</a
         >
       </li>
