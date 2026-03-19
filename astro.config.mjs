@@ -2,7 +2,6 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
-import vercel from "@astrojs/vercel";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -18,11 +17,4 @@ export default defineConfig({
     },
   },
   output: "static",
-  adapter: vercel(
-    {
-      webAnalytics: {
-        enabled: true,
-      },
-    }
-  )
 });
