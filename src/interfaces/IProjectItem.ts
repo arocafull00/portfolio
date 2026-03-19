@@ -3,7 +3,7 @@ export interface IProjectItem {
     githubLink: string;
     description: string
 }
-export interface IMainProject{
+export interface IFreelanceProject{
     title:string, 
     description:string, 
     tags:ITags[], 

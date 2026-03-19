@@ -17,6 +17,11 @@ const { title, description } = Astro.props;
     <SEO description={description} title={title}></SEO>
   </head>
   <body>
+    <a
+      href="#main-content"
+      class="absolute left-[-10000px] top-0 z-[100000] overflow-hidden whitespace-nowrap p-0 focus:fixed focus:left-4 focus:top-4 focus:m-0 focus:inline-block focus:h-auto focus:w-auto focus:max-w-[min(100vw-2rem,24rem)] focus:overflow-visible focus:whitespace-normal focus:rounded-md focus:bg-white focus:px-4 focus:py-3 focus:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-neutral-950"
+      >Skip to main content</a
+    >
     <div
       class="fixed top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.4),rgba(60,60,100,0.2))]"
     >
@@ -35,6 +40,9 @@ const { title, description } = Astro.props;
   }
   :root {
     color-scheme: light dark;
+  }
+  html.dark {
+    color-scheme: dark;
   }
   html {
     font-family: "Onest Variable", system-ui, sans-serif;

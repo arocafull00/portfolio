@@ -2,12 +2,18 @@
 import Envelope from "src/icons/Envelope.astro";
 ---
 
-<header id="contact" class="flex justify-start items-end gap-2 mb-8 mt-[6rem]">
-  <Envelope />
-  <h1 class="text-2xl font-bold">Contact me</h1>
+<header class="flex content-start items-end gap-2 mb-8 mt-[6rem]">
+  <span class="shrink-0 text-yellow-400/90" aria-hidden="true">
+    <Envelope />
+  </span>
+  <h2 id="contact-heading" class="text-2xl font-bold">Contact me</h2>
 </header>
-<section id="contact">
-  <form class="flex flex-col gap-5" action="https://formspree.io/f/moqgjqjk" method="POST">
+<section id="contact" aria-labelledby="contact-heading">
+  <form
+    class="flex flex-col gap-5"
+    action="https://formspree.io/f/moqgjqjk"
+    method="POST"
+  >
     <div>
       <label
         for="email"
@@ -19,7 +25,8 @@ import Envelope from "src/icons/Envelope.astro";
         name="email"
         type="email"
         id="email"
-        class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs md:text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        autocomplete="email"
+        class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs md:text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400/90 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus-visible:ring-yellow-400/80"
       />
     </div>
     <div class="mb-5">
@@ -27,20 +34,18 @@ import Envelope from "src/icons/Envelope.astro";
         for="message"
         class="block mb-2 text-md text-gray-900 dark:text-white">Message</label
       >
-      <input
+      <textarea
         required
-        word-break: break-word
         name="message"
         id="message"
-        class="block w-full h p-4 text-base resize-none text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-      >
-      </input>
+        rows="6"
+        class="block w-full min-h-[8rem] p-4 resize-y text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400/90 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus-visible:ring-yellow-400/80"
+      ></textarea>
     </div>
     <button
       type="submit"
-      class="py-2.5 px-5 me-2 mb-2 text-[1rem] w-fit font-medium text-gray-800 transition focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-100 dark:border-gray-600 dark:hover:text-yellow-400 dark:hover:bg-gray-700"
+      class="py-2.5 px-5 me-2 mb-2 text-[1rem] w-fit font-medium text-gray-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400/90 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus-visible:z-10 dark:focus-visible:ring-yellow-400/80 dark:bg-gray-800 dark:text-gray-100 dark:border-gray-600 dark:hover:text-yellow-400 dark:hover:bg-gray-700"
       >Submit</button
     >
   </form>
 </section>
-
